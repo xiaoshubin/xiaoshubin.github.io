@@ -1,24 +1,10 @@
 <html>
 <head><title>SmallCake's libary wiki</title></head>
 <body>
-<?php
-$url = "./";
-$lj = opendir($url);
-while(($filename = readdir($lj)) != false){
-echo $filname;
-if(is_dir($url.$filename)){
-echo "是目录"."";
-}
-echo "";
-}
-closedir($lj);
-?>
-
-<ul>
-<li><a title="SmallUtils" href="SmallUtils/index.html" target="_blank" text="about SmallUtils helper"/></li>
-</ul>
+	<ul>
+		<li>
+		<a title="SmallUtils" href="SmallUtils/index.html" target="_blank" text="about SmallUtils helper"/>
+		</li>
+	</ul>
 </body>
-
-
-
 </html>
