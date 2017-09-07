@@ -1,6 +1,10 @@
 <html>
 <head><title>SmallCake's libary wiki</title></head>
-<body>
+<body></body>
+<ul>
+<li><a href="SmallUtils/index.html" target="_blank">SmallUtils</a></li>
+</ul>
+
 <?php
 $url = "./";
 $lj = opendir($url);
@@ -13,12 +17,4 @@ echo "";
 }
 closedir($lj);
 ?>
-
-<ul>
-<li><a title="SmallUtils" href="SmallUtils/index.html" target="_blank" text="about SmallUtils helper"/></li>
-</ul>
-</body>
-
-
-
 </html>
