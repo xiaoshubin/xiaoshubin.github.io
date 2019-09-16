@@ -13,13 +13,26 @@
 	</ul>
 	<ul>
 		<li>
-		<h1 onClick='callAndroid("hello -- world~!")'>这是JS调用原生1</h1>
+		<h1 onclick="toast()">微信注入权限验证配置</h1>
 		</li>
 	</ul>
-	<script>
-    	function callAndroid(msg){
-        	android.hello(msg);
-    	}
-	</script>
+	
+<script type="text/javascript">
+    //注入权限验证配置
+　　function qshConfig(){ 　　
+        var debug = true;
+        var timestamp = Math.round(new Date() / 1000);
+        var appId = "888";
+        var nonceStr = Math.random().toString(36).substr(2);
+        var url = window.location.href;
+        var jsapi_ticket = "sM4AOVdWfPE4DxkXGEs8VMCPGGVi4C3VM0P37wVUCFvkVAy_90u5h9nbSlYy3-Sl-HhTdfl2fzFy1AOcHKP7qg";
+        var signature = $.md5("jsapi_ticket=" + jsapi_ticket + "&noncestr=" + nonceStr + "&timestamp=" + timestamp + "&url=" + url);
+        qsh.config(url,debug,appId,timestamp,nonceStr,signature); 　　
+    }
+    window.onload = qshConfig;
+    function toast(){
+        qsh.share("分享到微信==========");
+    }
+</script>
 </body>
 </html>
